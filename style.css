@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.banner-container {
+    background-image: url("img/img1.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.banner-content {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 30%;
+}
+
+h1 {
+    font-family: 'Shadows Into Light', sans-serif;
+    font-weight: 700;
+    text-shadow: 5px 5px 5px #a27b50;
+    color: white;
+}
+
+a {
+    margin-top: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px;
+    color: #ca3c72;
+    border: 4px solid #000;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.btn:hover,.btn:active {
+    border: 4px solid #ca3c72;
+    background-color: #f5bfc5;
+    transition:  background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+
+@media (max-width: 575px) {
+    h1{
+        font-size: 50px
+    }
+    .btn {
+        width: 100px;
+    }
+    a {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    h1{
+        font-size: 100px;
+    }
+    .btn {
+        width: 200px;
+    }
+    a {
+        font-size: 26px;
+    }
+}
+
+
+
+
