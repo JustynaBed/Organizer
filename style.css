@@ -17,7 +17,7 @@ body {
     text-align: center;
     position: absolute;
     width: 100%;
-    top: 30%;
+    top: 10%;
 }
 
 h1 {
@@ -50,16 +50,144 @@ a {
     transition:  background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
+.form {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.form-head {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    border-bottom: 1px solid #000;
+}
+
+.form-head > div {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 55px;
+    cursor: pointer;
+}
+
+.form-body input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000;
+    display: block;
+    width: 74%;
+    height: 30px;
+    margin-left: 56px;
+    margin-top: 10px;
+    font-size: 18px;
+    text-indent: 38px;
+}
+
+.form-body > i.fa {
+    position: relative;
+    top: 34px;
+    left: 60px;
+    font-size: 20px;
+}
+
+.form-body input:focus {
+    border-bottom: 2px solid #ca3c72;
+    transition: all .4s ease-in-out;
+    background-color: rgba(245,191,197, 0.3);
+    border-radius: 5px;
+}
+
+.btn-sign-in {
+    text-align: center;    
+}
+
+.btn-sign-in button {
+    position: relative;
+    width: 200px;
+    height: 35px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f5bfc5;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.span {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;    
+    color: #ca3c72;
+}
+
+.form-footer{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-footer-content {
+    position: absolute;
+    width: 31%;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+}
+
+.form-footer-content > div.social-sign {
+    position: relative;
+    float: left;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.form-footer-content i {
+    position: relative;
+    text-align: center;    
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.icon-facebook {
+    background: #3b5999;
+}
+
+.icon-google {
+    background: #dd4b39;
+}
 
 @media (max-width: 575px) {
     h1{
-        font-size: 50px
+        font-size: 69px
     }
     .btn {
         width: 100px;
     }
     a {
         font-size: 18px;
+    }
+    .form {
+      width: 350px;
+      height: 380px;
+    }
+    .form-footer-content {
+        width: 35%;
     }
 }
 

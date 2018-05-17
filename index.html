@@ -1,17 +1,61 @@
 <!DOCTYPE html>
 <html lang="eng">
-    <meta charset="UTF=8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Organizer</title>
 
 <body>
     <header class="banner">
         <div class="banner-container">
+
             <div class="banner-content">
                 <h1>Organizer</h1>
-                <a class="btn" href="#">CLICK HERE</a>
+                <!-- <a class="btn" href="#">CLICK HERE</a> -->
+            </div>
+
+            <div class="form">
+
+                <div class="form-head">
+                   <div class="login-tab" data-tab="sign-in">Sign in</div>
+                   <div class="signup-tab" data-tab="sign-up">Sign up</div>
+                </div>
+                
+                <div class="form-body">
+
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <input type="text" placeholder="Email" id="email-txt">
+                    
+                    <i class="fa fa-unlock" aria-hidden="true"></i>
+                    <input type="password" placeholder="Password" id="password-txt">
+                
+                    <div class="btn-sign-in">
+                        <button>Sign in</button>
+                    </div>
+                    
+                </div>
+
+                <div class="span">
+                    <span>OR</span>
+                </div>
+
+                <div class="form-footer">
+                    <div class="form-footer-content">
+
+                        <p>Login with</p>
+
+                        <div class="social-sign icon-google">
+                            <i class="fa fa-google" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="social-sign icon-facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>   
+
+                    </div>
+                </div>
             </div>
         </div>
     </header>
