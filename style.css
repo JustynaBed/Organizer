@@ -78,7 +78,7 @@ a {
     cursor: pointer;
 }
 
-.form-body input {
+.form-sign-in input, .form-sign-up input {
     border: none;
     outline: none;
     border-bottom: 2px solid #000;
@@ -91,25 +91,25 @@ a {
     text-indent: 38px;
 }
 
-.form-body > i.fa {
+.form-sign-in > i.fa, .form-sign-up > i.fa {
     position: relative;
     top: 34px;
     left: 60px;
     font-size: 20px;
 }
 
-.form-body input:focus {
+.form-sign-in input:focus, .form-sign-up input:focus {
     border-bottom: 2px solid #ca3c72;
     transition: all .4s ease-in-out;
     background-color: rgba(245,191,197, 0.3);
     border-radius: 5px;
 }
 
-.btn-sign-in {
+.btn-sign-in,.btn-sign-up {
     text-align: center;    
 }
 
-.btn-sign-in button {
+.btn-sign-in button, .btn-sign-up button {
     position: relative;
     width: 200px;
     height: 35px;
@@ -172,6 +172,11 @@ a {
     background: #dd4b39;
 }
 
+.disabled {
+    background-color: rgb(241, 241, 241);
+    border-radius: 20px 20px 0 0;    
+}
+
 @media (max-width: 575px) {
     h1{
         font-size: 69px
@@ -202,7 +207,3 @@ a {
         font-size: 26px;
     }
 }
-
-
-
-
