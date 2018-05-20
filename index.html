@@ -16,7 +16,7 @@
                 <!-- <a class="btn" href="#">CLICK HERE</a> -->
             </div>
 
-            <div class="form">
+            <div class="form" id="login-panel">
 
                 <div class="form-head">
                    <div class="sign-in-tab" data-tab="sign-in">Sign in</div>
@@ -25,13 +25,13 @@
                 
                 <div class="form-sign-in">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <input type="text" placeholder="Email" id="email-txt">
+                    <input type="text" placeholder="Email" id="email-sign-in">
                     
                     <i class="fa fa-unlock" aria-hidden="true"></i>
-                    <input type="password" placeholder="Password" id="password-txt">
+                    <input type="password" placeholder="Password"  id="password-sign-in">
                 
-                    <div class="btn-sign-in">
-                        <button>Sign in</button>
+                    <div class="form-btn">
+                        <button id="btn-sign-in">Sign in</button>
                     </div>
                     
                     <div class="span">
@@ -55,21 +55,32 @@
 
                 <div class="form-sign-up">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <input type="txt" placeholder="Email">
+                    <input type="txt" placeholder="Email" id="email-sign-up">
                     
                     <i class="fa fa-unlock" aria-hidden="true"></i>                    
-                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Password" id="password-sign-up">
                     
-                    <div class="btn-sign-up">
-                        <button>Sign up</button>
+                    <div class="form-btn">
+                        <button id="btn-sign-up">Sign up</button>
                     </div>
                 </div>
             </div>
+
+            <div id="user-panel">
+                <h1>Welcome</h1>
+                <p id="login-panel-text"></p>
+                <div class="form-btn">
+                    <button id="btn-sign-out" class="hide">Log out</button> 
+                </div>
+            </div>    
         </div>
     </header>
 
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/login.js"></script>
 
 </body>
 </html>
