@@ -9,45 +9,45 @@ const txtEmailSignUp = document.getElementById('email-sign-up');
 const txtPasswordSignUp = document.getElementById('password-sign-up');
 
 btnSignIn.addEventListener('click', e => {
-const emailIn = txtEmailSignIn.value;
-const passIn = txtPasswordSignIn.value;
-const auth = firebase.auth();
+    const emailIn = txtEmailSignIn.value;
+    const passIn = txtPasswordSignIn.value;
+    const auth = firebase.auth();
 
-const promise = auth.signInWithEmailAndPassword(emailIn, passIn);
-promise.catch(e => console.log(e.massage));
-console.log('Kliknieto')
+    const promise = auth.signInWithEmailAndPassword(emailIn, passIn);
+    promise.catch(e => console.log(e.massage));
+    console.log('Kliknieto')
 });
 
 btnSignUp.addEventListener('click', e => {
-const emailUp = txtEmailSignUp.value;
-const passUp = txtPasswordSignUp.value;
-const auth = firebase.auth();
+    const emailUp = txtEmailSignUp.value;
+    const passUp = txtPasswordSignUp.value;
+    const auth = firebase.auth();
 
-const promise = auth.createUserWithEmailAndPassword(emailUp, passUp);
-promise.catch(e => console.log(e.massage));
-console.log('Kliknieto')
+    const promise = auth.createUserWithEmailAndPassword(emailUp, passUp);
+    promise.catch(e => console.log(e.massage));
+    console.log('Kliknieto')
 });
 
 btnSignOut.addEventListener('click', e => {
-firebase.auth().signOut();
+    firebase.auth().signOut();
 });
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
 if(firebaseUser) {
-console.log("User: ", firebaseUser);
-btnSignOut.classList.remove('hide');
-UserPanel.style.display = "block";
-LoginPanel.style.display = "none";
+    console.log("User: ", firebaseUser);
+    btnSignOut.classList.remove('hide');
+    UserPanel.style.display = "block";
+    LoginPanel.style.display = "none";
 
-const user = firebase.auth().currentUser;
+    const user = firebase.auth().currentUser;
 
-if(user != null) {
-document.getElementById('login-panel-text').innerHTML = 'Welcome User : ' + user.email
-}
+    if(user != null) {
+        document.getElementById('login-panel-text').innerHTML = 'Welcome User : ' + user.email
+    }
 } else {
-console.log('no one is logged in');
-btnSignOut.classList.add('hide');
-UserPanel.style.display = "none";
-LoginPanel.style.display = "block";
+    console.log('no one is logged in');
+    btnSignOut.classList.add('hide');
+    UserPanel.style.display = "none";
+    LoginPanel.style.display = "block";
 }
 });
