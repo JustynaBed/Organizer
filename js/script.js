@@ -30,6 +30,16 @@ $tabSignUp.on('click', function() {
     $formSignUp.show();
 });
 
+$emailSignUp.on('blur', function(){
+    if(REQUIRED_PATTERN_MAIL.test($emailSignUp.val()))  {
+        $emailSignUp.removeClass('invalid').addClass('valid');
+        $('.information').text('E-mail ma poprawny format.').removeClass('inf-bad').addClass('inf-good');
+    } else {
+        $emailSignUp.removeClass('valid').addClass('invalid');
+        $('.information').text('E-mail ma niepoprawny format. Poprawny format to np. jan.kowalski@wp.pl').removeClass('inf-good').addClass('inf-bad');        
+    }
+})
+
 function required() {
     return !REQUIRED_PATTERN_MAIL.test($emailSignUp.val()) ||
     !REQUIRED_PATTERN_PASSWORD.test($passwordSignUp.val()) 

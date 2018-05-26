@@ -190,21 +190,29 @@ a {
     display: none;
 }
 
-.rejection {
+.inf-bad {
 	color: red;	
 }
- 
-.acceptance {
-	color: green;	
+
+.inf-good {
+    color: green;	
 }
 
-.invalid{
-    border: 3px solid red;
+input.invalid{
+    border-bottom:  2px solid red;
 }
  
-.valid{
-    border: 3px solid green;
+input.valid{
+    border-bottom: 2px solid green;
 }
+
+div.information {
+    text-align: center;
+    background: white;
+    border-radius: 5px;
+    margin: 50px;
+}
+
 @media (max-width: 575px) {
     h1{
         font-size: 69px
