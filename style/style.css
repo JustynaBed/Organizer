@@ -109,18 +109,27 @@ a {
     text-align: center;    
 }
 
-.form-btn button {
+.form-btn button  {
     position: relative;
     width: 200px;
     height: 35px;
     margin-top: 25px;
     border: none;
     border-radius: 10px;
-    background-color: #f5bfc5;
+   
     text-transform: uppercase;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+}
+
+.form-btn button:disabled {
+    border: 1px solid #dbffb2;
+    background-color: red;
+}
+
+.form-btn button:enabled {
+    background-color: #f5bfc5;
 }
 
 .span {
@@ -181,6 +190,21 @@ a {
     display: none;
 }
 
+.rejection {
+	color: red;	
+}
+ 
+.acceptance {
+	color: green;	
+}
+
+.invalid{
+    border: 3px solid red;
+}
+ 
+.valid{
+    border: 3px solid green;
+}
 @media (max-width: 575px) {
     h1{
         font-size: 69px
