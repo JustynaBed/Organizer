@@ -52,7 +52,7 @@ $passwordSignUp.on('blur', function(){
 });
 
 $RePasswordSignUp.on('blur', function(){
-    if($passwordSignUp.val() === $RePasswordSignUp.val())  {
+    if($passwordSignUp.val() === $RePasswordSignUp.val() & $RePasswordSignUp.val().length > 1)  {
         $RePasswordSignUp.removeClass('invalid').addClass('valid');
         $('.information').text('Hasła są takie same.').removeClass('inf-bad').addClass('inf-good');
     } else {
