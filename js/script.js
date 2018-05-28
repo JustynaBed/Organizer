@@ -4,6 +4,7 @@ const $tabSignIn = $('.sign-in-tab');
 const $tabSignUp = $('.sign-up-tab');
 const $emailSignUp = $('#email-sign-up');
 const $passwordSignUp = $('#password-sign-up');
+const $RePasswordSignUp = $('#re-password-sign-up');
 const $btnSignUp = $('#btn-sign-up');
 
 const REQUIRED_PATTERN_MAIL = /^.*(?=.{8,})([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
@@ -38,7 +39,7 @@ $emailSignUp.on('blur', function(){
         $emailSignUp.removeClass('valid').addClass('invalid');
         $('.information').text('E-mail ma niepoprawny format. Poprawny format to np. jan.kowalski@wp.pl').removeClass('inf-good').addClass('inf-bad');        
     }
-})
+});
 
 $passwordSignUp.on('blur', function(){
     if(REQUIRED_PATTERN_PASSWORD.test($passwordSignUp.val()))  {
@@ -48,15 +49,27 @@ $passwordSignUp.on('blur', function(){
         $passwordSignUp.removeClass('valid').addClass('invalid');
         $('.information').text('Hasło ma niepoprawny format. Użyj min. 8 znaków,  w tym przynajmniej 1 małą, 1 dużą literę, cyfrę i 2 znaki specjalne np. @#$%&').removeClass('inf-good').addClass('inf-bad');        
     }
-})
+});
+
+$RePasswordSignUp.on('blur', function(){
+    if($passwordSignUp.val() === $RePasswordSignUp.val())  {
+        $RePasswordSignUp.removeClass('invalid').addClass('valid');
+        $('.information').text('Hasła są takie same.').removeClass('inf-bad').addClass('inf-good');
+    } else {
+        $RePasswordSignUp.removeClass('valid').addClass('invalid');
+        $('.information').text('Hasła nie są takie same').removeClass('inf-good').addClass('inf-bad');        
+    }
+});
+
 
 function required() {
     return !REQUIRED_PATTERN_MAIL.test($emailSignUp.val()) ||
-    !REQUIRED_PATTERN_PASSWORD.test($passwordSignUp.val()) 
+    !REQUIRED_PATTERN_PASSWORD.test($passwordSignUp.val()) ||
+    $passwordSignUp.val() !== $RePasswordSignUp.val()
 }
 
 function validatebtnSignUp() {
     $btnSignUp.prop('disabled', required());
 }
 
-$emailSignUp.add($passwordSignUp).on('keyup', validatebtnSignUp);
+$emailSignUp.add($passwordSignUp).add($RePasswordSignUp).on('keyup', validatebtnSignUp);
