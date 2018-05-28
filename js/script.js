@@ -6,7 +6,7 @@ const $emailSignUp = $('#email-sign-up');
 const $passwordSignUp = $('#password-sign-up');
 const $btnSignUp = $('#btn-sign-up');
 
-const REQUIRED_PATTERN_MAIL = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+const REQUIRED_PATTERN_MAIL = /^.*(?=.{8,})([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 const REQUIRED_PATTERN_PASSWORD = /^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&]).*$/;
 
 $(document).ready(function() {
@@ -37,6 +37,16 @@ $emailSignUp.on('blur', function(){
     } else {
         $emailSignUp.removeClass('valid').addClass('invalid');
         $('.information').text('E-mail ma niepoprawny format. Poprawny format to np. jan.kowalski@wp.pl').removeClass('inf-good').addClass('inf-bad');        
+    }
+})
+
+$passwordSignUp.on('blur', function(){
+    if(REQUIRED_PATTERN_PASSWORD.test($passwordSignUp.val()))  {
+        $passwordSignUp.removeClass('invalid').addClass('valid');
+        $('.information').text('Hasło ma poprawny format.').removeClass('inf-bad').addClass('inf-good');
+    } else {
+        $passwordSignUp.removeClass('valid').addClass('invalid');
+        $('.information').text('Hasło ma niepoprawny format. Użyj min. 8 znaków,  w tym przynajmniej 1 małą, 1 dużą literę, cyfrę i 2 znaki specjalne np. @#$%&').removeClass('inf-good').addClass('inf-bad');        
     }
 })
 
