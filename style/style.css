@@ -40,6 +40,7 @@ h2 {
     font-size: 7rem;
 }
 
+
 .welcome-panel {
     display: flex;
     justify-content: center;
@@ -54,7 +55,6 @@ h2 {
 .welcome-panel p {
     font-size: 2rem;
     font-family: 'Source Sans Pro', sans-serif;
-
 }
 
 .welcome-panel div {
@@ -252,6 +252,10 @@ div.information {
     background: white;
     border-radius: 5px;
     margin: 25px;
+}
+
+.form-sign-up {
+    font-size: 1.5em;
 }
 
 #btn-sign-out {
