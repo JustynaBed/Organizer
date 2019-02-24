@@ -30,6 +30,7 @@ btnSignUp.addEventListener('click', e => {
 
 btnSignOut.addEventListener('click', e => {
     firebase.auth().signOut();
+    window.location.href = 'index.html'
 });
 
 firebase.auth().onAuthStateChanged(firebaseUser => {

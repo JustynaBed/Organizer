@@ -9,13 +9,10 @@
 <link rel="stylesheet" href="style/style.css">
 <title>Organizer</title>
 
-<body>
+<body id="game-one" class="banner-container">
     <header class="banner">
-        <div class="banner-container">
-
+        <div>
             <div class="banner-content">
-                <h1>Organizer</h1>
-                <!-- <a class="btn" href="#">CLICK HERE</a> -->
             </div>
 
             <div class="form" id="login-panel">
@@ -76,14 +73,7 @@
             </div>
 
             <div id="user-panel">
-                <div class="welcome-panel">
-                    <div>
-                        <p id="login-panel-text"></p>
-                    </div>
-                </div>
-                <div class="form-btn">
-                    <button id="btn-sign-out" class="hide">Log out</button>
-                </div>
+
 
                 <div class="menu-btn">
                     <div class="btn-line"></div>
@@ -98,12 +88,8 @@
                     </div>
 
                     <ul class="menu-nav">
-                        <li class="nav-item welcome-panel">
-                            <p id="login-panel-text"></p>
-                        </li>
-
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="index.html" class="nav-link">
                                 Home
                             </a>
                         </li>
@@ -115,17 +101,46 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="gameOne.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 Game One
                             </a>
                         </li>
                     </ul>
-
+                    <div class="welcome-panel">
+                        <div>
+                            <p id="login-panel-text"></p>
+                        </div>
+                    </div>
+                    <div class="form-btn">
+                        <button id="btn-sign-out" class="hide">Log out</button>
+                    </div>
                 </nav>
 
             </div>
         </div>
     </header>
+    <main id="game-container">
+        <div id="game-panel">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </main>
 
     <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
